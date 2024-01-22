@@ -1,4 +1,4 @@
-# C# POO
+# C# MVC POO
 C# MVC POO en donde se agrega un producto y se elimina un producto
 
 Curso de mvc C# en : [este link CRUD sqlite](https://www.youtube.com/watch?v=9JP3PSUb5cY&list=PL9Bm8IOGYHA3X6LjUEQAw9EGxTq5EAees&index=1)
