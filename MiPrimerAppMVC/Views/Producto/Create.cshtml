@@ -1,0 +1,29 @@
+@model MiPrimerAppMVC.Models.Producto
+
+@{
+    ViewData["Title"]="Crear producto";
+}
+
+<div><p>@ViewBag.Message</p></div>
+<div>
+    <form asp-action="Create" class="form-group">
+        <div class="form-group">
+            <label asp-for="Nombre"></label>
+            <input asp-for="Nombre"/>
+        </div>
+         <div class="form-group">
+            <label asp-for="Descripcion"></label>
+            <input asp-for="Descripcion"/>
+        </div>
+         <div class="form-group">
+            <label asp-for="Precio"></label>
+            <input asp-for="Precio"/>
+        </div>
+        <div>
+            <label>
+                Activo : <input asp-for="Activo"/>
+            </label>
+        </div>
+        <input type="submit" value="Create" />
+    </form>
+</div>

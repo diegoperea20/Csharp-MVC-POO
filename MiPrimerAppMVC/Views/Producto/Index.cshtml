@@ -1,0 +1,50 @@
+@model IEnumerable<MiPrimerAppMVC.Models.Producto>
+
+<p>Vista del controlador Producto</p>
+
+<h1>Productos</h1>
+
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    
+</style>
+<form method="post" action="@Url.Action("Eliminar", "Producto")">
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Descripcion</th>
+                <th>Precio</th>
+                <th>Fecha de Creación</th>
+                <th>Eliminar</th>
+              
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Producto producto in Model)
+            {
+                <tr>
+                    <td>@producto.Nombre</td>
+                    <td>@producto.Descripcion</td>
+                    <td>@producto.Precio</td>
+                    <td>@producto.FechaCreacion</td>
+                    <td>
+                        <input type="hidden" name="id" value="@producto.Id" />
+                        <input type="submit" value="Eliminar" />
+                    </td>
+                    
+                </tr>
+            }
+        </tbody>
+    </table>
+</form>
